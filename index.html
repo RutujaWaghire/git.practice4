@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Preview Card</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #b2acac;
+            font-family: Arial, sans-serif;
+        }
+        .card {
+            width: 300px;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+        .card:hover {
+            transform: scale(1.05);
+        }
+        .card img {
+            width: 100%;
+            height: auto;
+        }
+        .card-content {
+            padding: 15px;
+        }
+        .card-title {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        .card-price {
+            color: #9e27ae;
+            font-size: 1.5em;
+        }
+        .card-old-price {
+            text-decoration: line-through;
+            color: #e38eb9;
+            margin-left: 10px;
+        }
+        .card-button {
+            display: block;
+            width: 100%;
+            text-align: center;
+            background: #cc167d;
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 15px;
+            font-size: 1em;
+            transition background: 0.3s;
+        }
+        .card-button:hover {
+            background: #ff4500;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <img src="image.png" alt="Book image">
+        <div class="card-content">
+            <div class="card-title">Don't Sweat the small stuff  [Book]</div>
+            <div>
+                <span class="card-price">$50</span>
+                <span class="card-old-price">$100</span>
+            </div>
+            <button class="card-button" onclick="addToCart()">Add to Cart</button>
+        </div>
+    </div>
+    <script>
+        function addToCart() {
+            alert("Product added to cart!");
+        }
+    </script>
+</body>
+</html>
